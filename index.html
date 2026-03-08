@@ -11,7 +11,9 @@
     <div class="brand">NutriApp</div>
     <nav class="app-nav">
       <a href="#" data-section="registro" class="nav-link active">Registro</a>
+      <a href="#" data-section="desayuno" class="nav-link">Desayuno</a>
       <a href="#" data-section="calculadora" class="nav-link">Calculadora</a>
+      <a href="#" data-section="menu" class="nav-link">Menú Hambre Cero</a>
       <a href="#" data-section="comparar" class="nav-link">Comparar OMS</a>
       <a href="#" data-section="alertas" class="nav-link">Alertas</a>
     </nav>
@@ -41,6 +43,17 @@
         <div id="registro-ok" class="hint"></div>
       </form>
     </section>
+    <section id="desayuno" class="view hidden">
+      <h1>Desayuno de hoy</h1>
+      <div class="card">
+        <h2>Registrar desayuno</h2>
+        <div id="breakfast-quick" class="catalogo"></div>
+      </div>
+      <div class="card">
+        <h2>Alimentos del desayuno</h2>
+        <ul id="breakfast-list" class="list"></ul>
+      </div>
+    </section>
     <section id="calculadora" class="view hidden">
       <h1>Calculadora nutricional</h1>
       <div class="card">
@@ -66,9 +79,17 @@
               <label>Grasa saturada (g)</label>
               <input type="number" id="alimento-grasa" min="0" step="0.1" required>
             </div>
+            <div class="form-row">
+              <label>Proteína (g)</label>
+              <input type="number" id="alimento-proteina" min="0" step="0.1" required>
+            </div>
           </div>
           <button type="submit" class="btn accent">Agregar</button>
         </form>
+      </div>
+      <div class="card">
+        <h2>Catálogo rápido</h2>
+        <div id="catalogo" class="catalogo"></div>
       </div>
       <div class="card">
         <h2>Lista de alimentos</h2>
@@ -77,6 +98,12 @@
       <div class="card">
         <h2>Totales del día</h2>
         <div id="totales" class="totals"></div>
+      </div>
+    </section>
+    <section id="menu" class="view hidden">
+      <h1>Menú del día · Hambre Cero</h1>
+      <div class="card">
+        <div id="menu-dia" class="menu-grid"></div>
       </div>
     </section>
     <section id="comparar" class="view hidden">
